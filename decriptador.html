@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <meta charset= "UTF-8">
+    <title>Challenge ONE 1 </title>
+    <h1>#Decodificador_</h1>
+    <br><br><br>
+    <body>
+    <label for="input-texto">Apenas letras minúsculas, sem acento: </label>
+    <br><br><br><br>
+    <label for "encriptar">
+    <input type= "text" id="encriptar1" />
+      
+<button type="submit" onclick="criptar()"> Encriptar</button> 
+      <h2 id="encriptado"></h2>
+   <br><br><br>
+      
+   <label for "descriptar">
+   <input type= "text" id="descriptar1"/>
+   <button type="submit" onclick="descriptar()"> Descriptar</button> 
+       <br><br><br><br>
+       <h3 id="descriptado"></h3>
+       
+   </body>
+ <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+      
+      <br><br><br>
+      <footer> Jessica Boll - Sra. Kidov </footer>
+
+<script>
+function criptar(){
+  var texto = document.getElementById("encriptar1").value;
+  var criptar= texto.replace(/e/gi, 'enter').replace(/i/gi, 'imes').replace(/a/gi, 'ai').replace(/o/gi, 'ober').replace(/u/gi, 'ufat');
+
+  var resultado = document.getElementById("encriptado");
+  var ResultadoEncriptado = "O Resultado é   =  " + criptar;
+  resultado.innerHTML = ResultadoEncriptado;  
+  console.log(ResultadoEncriptado)
+  }
+
+function descriptar(){
+  var texto = document.getElementById("descriptar1").value;
+  var descriptar= texto.replace(/enter/gi, 'e').replace(/imes/gi, 'i').replace(/ai/gi, 'a').replace(/ober/gi, 'o').replace(/ufat/gi, 'u');
+  
+  var resultado = document.getElementById("descriptado");
+  var ResultadoDescriptado = "O Resultado é   =  " + descriptar;
+  resultado.innerHTML = ResultadoDescriptado;  
+  console.log(ResultadoDescriptado)
+}
+
+</script>
+
+<style>
+h1{
+  font-family: "roboto mono",monospace;
+  font-size:90px;
+  color: white;
+  text-align: center;
+}
+  
+body{
+  background-color: #008B8B	;
+  font-family: "roboto mono", monospace;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  
+}
+  
+button{
+  border: 0;
+  color: white;
+  font-weight: "roboto mono" monospace;
+  background-color:#00ced1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 0.5em;
+}
+
+input{
+  padding:30px;
+  margin: 0 25px 0 25px;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+  background-color:White;
+  border-radius:3em;
+  color:#20b2aa;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+h2{
+  font-family: "roboto mono", monospace;
+  color: white;
+  text-align: center;
+  font-size: 25px
+}
+
+h3{
+   font-family: "roboto mono", monospace;
+  color: white;
+  text-align: center;
+  font-size: 25px}
+
+}
+
+</style>
